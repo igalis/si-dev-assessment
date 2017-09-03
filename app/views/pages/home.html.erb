@@ -1,6 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Igor's homepage</h1>
+<p>Welcome to Igor's homepage!</p>
 
 <%= form_tag("/sms/send", method: "post") do %>
 <!-- add form elements here -->
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <% end %>
